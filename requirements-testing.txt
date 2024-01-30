@@ -1,4 +1,4 @@
-bmi-tester
+bmi-tester>=0.5.7
 coveralls
 pytest
 pytest-cov

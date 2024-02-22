@@ -44,11 +44,9 @@ jobs:
 
       - name: Run bmi-test
         run: |
-          pip install model-metadata
-          conda install gimli.units -c conda-forge
-          pip install bmi-tester
+          pip install model-metadata gimli.units bmi-tester
           pip install .
-          bmi-test heat:BmiHeat --config-file=./examples/heat.yaml --root-dir=./examples -vvv
+          bmi-test heat:BmiHeat --config-file=./heat.yaml --root-dir=./examples -vvv
 
       - name: Coveralls
         if: matrix.os == 'ubuntu-latest'

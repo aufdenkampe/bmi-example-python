@@ -46,7 +46,7 @@ jobs:
         run: |
           pip install model-metadata gimli.units bmi-tester
           pip install .
-          bmi-test heat:BmiHeat --config-file=./heat.yaml --root-dir=./examples -vvv
+          cd examples && bmi-test heat:BmiHeat --config-file=./heat.yaml --root-dir=. -vvv
 
       - name: Coveralls
         if: matrix.os == 'ubuntu-latest'
